@@ -18,7 +18,6 @@ export default function Tasks() {
   );
 
   const addTask = (task) => {
-    console.log(task);
     if (task) {
       setTodos([...todos, task]);
     }
@@ -38,7 +37,7 @@ export default function Tasks() {
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>ADD</Text>
         </TouchableOpacity>
       </View>
-      <View style={{ flex: 1, alignItems: "center" }}>
+      <View style={{ alignItems: "center" }}>
         <FlatList
           data={todos}
           renderItem={({ item, index }) => (
