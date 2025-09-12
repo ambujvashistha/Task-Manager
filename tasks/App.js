@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Tasks from "./components/screens/Tasks";
+import Settings from "./components/screens/Settings";
 
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
@@ -26,12 +27,12 @@ export default function App() {
                       uri: "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png",
                     }}
                   />
-                  <Drawer.Screen name="Settings" component={Settings} />
                 </Text>
               </Pressable>
             ),
           })}
         />
+        <Drawer.Screen name="Settings" component={Settings} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
