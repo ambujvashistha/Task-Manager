@@ -13,7 +13,24 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator>
-        <Drawer.Screen name="ohlala" component={Tasks} />
+        <Drawer.Screen
+          name="All Tasks"
+          component={Tasks}
+          screenOptions={({ navigation }) => ({
+            headerLeft: () => (
+              <Pressable onPress={navigation.toggleDrawer}>
+                <Text>
+                  <Avatar.Image
+                    size={32}
+                    source={{
+                      uri: "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png",
+                    }}
+                  />
+                </Text>
+              </Pressable>
+            ),
+          })}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );

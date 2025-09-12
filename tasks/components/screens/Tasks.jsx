@@ -5,8 +5,6 @@ import {
   TextInput,
   Image,
   FlatList,
-  Button,
-  Touchable,
   TouchableOpacity,
 } from "react-native";
 
@@ -15,11 +13,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Tasks() {
   const [todos, setTodos] = useState([]);
   const [task, setTask] = useState("");
-  const [profilePic, setproilePic] = useState(
+  const [profilePic, setprofilePic] = useState(
     "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png"
   );
 
   const addTask = (task) => {
+    console.log(task);
     if (task) {
       setTodos([...todos, task]);
     }
@@ -52,7 +51,7 @@ export default function Tasks() {
                 style={styles.removeBtn}
               >
                 <Image
-                  source={require("../assets/bin.png")}
+                  source={require("../../assets/bin.png")}
                   style={styles.removeIcon}
                 />
               </TouchableOpacity>
