@@ -1,4 +1,7 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import {
+  BottomTabBar,
+  createBottomTabNavigator,
+} from "@react-navigation/bottom-tabs";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -6,6 +9,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Tasks from "./components/screens/Tasks";
 import Settings from "./components/screens/Settings";
+import Profile from "./components/screens/Profile";
 
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
@@ -33,6 +37,7 @@ export default function App() {
           })}
         />
         <Drawer.Screen name="Settings" component={Settings} />
+        <Drawer.Screen name="Profile" component={Profile} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
