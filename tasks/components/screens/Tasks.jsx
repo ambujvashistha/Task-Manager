@@ -30,6 +30,7 @@ export default function Tasks() {
           flexDirection: "row",
           marginHorizontal: 10,
           alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <Image
@@ -49,7 +50,7 @@ export default function Tasks() {
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>ADD</Text>
         </TouchableOpacity>
       </View>
-      <View style={{ alignItems: "center" }}>
+      <View style={{ aligfnItems: "center" }}>
         <FlatList
           data={todos}
           renderItem={({ item, index }) => (
